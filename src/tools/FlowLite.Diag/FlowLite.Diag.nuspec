@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>FlowLite.Diag</id>
+        <version>8.0.0</version>
+        <title>FlowLite.Diag</title>
+        <authors>Nikolay Selyutin (HawkN113)</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>FlowLite.Diag is a .NET CLI tool that scans your project for FlowTransitionBuilder declarations and generates visual FSM diagrams in Mermaid or DOT format. Features: - parses C# source files for **FlowTransitionBuilder** usage, - generates state diagrams for each builder,- supports Mermaid.js and Graphviz DOT output formats, - designed to aid in debugging, documentation, and understanding workflows</description>
+        <summary>CLI tool to visualize **FlowLite** FSM configurations via Mermaid.js or DOT diagrams.</summary>
+        <tags>.net8, fsm, flowlite, dotnet-tool, mermaid, dot, state-machine, visualization, .net.core, diagrams, analyzer cli, async-flow, lifecycles</tags>
+        <repository type="git" url="https://github.com/HawkN113/FlowLite" branch="main" />
+        <projectUrl>https://github.com/HawkN113/FlowLite</projectUrl>
+        <license type="expression">MIT</license>
+        <icon>content\FlowLite.Diag.ico.png</icon>
+        <readme>content\README.md</readme>
+        <language>en-GB</language>
+        <releaseNotes>
+            - Added support for .NET 8.0;
+            - Initial release of FlowLite.Diag;
+            - Analyze source files for FlowTransitionBuilder usage;
+            - Generate FSM diagrams (Mermaid/DOT);
+            - Designed for developers building workflows using FlowLite;
+        </releaseNotes>
+        <copyright>Copyright © 2025 Nikolay Selyutin (HawkN113)</copyright>
+        <dependencies>
+            <group targetFramework="net8.0" />
+        </dependencies>
+        <packageTypes>
+            <packageType name="DotnetTool" />
+        </packageTypes>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\publish\**\*" target="tools\net8.0\any\" />
+        <file src="Package\Content\FlowLite.Diag.ico.png" target="content\FlowLite.Diag.ico.png" />
+        <file src="Package\Content\README.md" target="content\README.md" />
+        <file src="DotnetToolSettings.xml" target="tools\net8.0\any\DotnetToolSettings.xml" />
+    </files>
+</package>

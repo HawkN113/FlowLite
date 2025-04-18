@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>FlowLite.Testing</id>
+        <version>8.0.0</version>
+        <title>FlowLite.Testing</title>
+        <authors>Nikolay Selyutin (HawkN113)</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>FlowLite.Testing is a lightweight and expressive assertion library tailored for FlowLite FSM. It enables fluent validation of state transitions, logs, and entity lifecycle directly within your unit tests. Designed for test clarity, minimal dependencies, and developer productivity — FlowLite.Testing keeps your state machine behavior testable, readable, and deterministic.</description>
+        <summary>Fluent testing API for FlowLite FSM — assert state, transitions, logs and entity lifecycle.</summary>
+        <tags>fsm, .net8, workflow, state-machine, ddd, transitions, states, flow, .net.core, flowLite, async-flow, lifecycles, testing, assertions</tags>
+        <repository type="git" url="https://github.com/HawkN113/FlowLite" branch="main" />
+        <projectUrl>https://github.com/HawkN113/FlowLite</projectUrl>
+        <license type="expression">MIT</license>
+        <icon>content\FlowLite.ico.png</icon>
+        <readme>content\README.md</readme>
+        <language>en-GB</language>
+        <releaseNotes>
+            - Added support for .NET 8.0;
+        </releaseNotes>
+        <copyright>Copyright © 2025 Nikolay Selyutin (HawkN113)</copyright>
+        <dependencies>
+            <group targetFramework="net8.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\*" target="lib\net8.0" />
+        <file src="Package\Content\FlowLite.ico.png" target="content\FlowLite.ico.png" />
+        <file src="Package\Content\README.md" target="content\README.md" />
+    </files>
+</package>

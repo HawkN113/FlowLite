@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>FlowLite.Diagnostics</id>
+        <version>8.0.0</version>
+        <title>FlowLite.Diagnostics</title>
+        <authors>Nikolay Selyutin (HawkN113)</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>FlowLite.Diagnostics is an extension package for FlowLite FSM that enables advanced diagnostic, logging, telemetry, and observability features for .NET applications. Integrate easily with OpenTelemetry, System.Diagnostics, and Microsoft.Extensions.Logging. Automatically monitor lifecycle events, track state transitions, entity changes, durations, failures, and more.</description>
+        <summary>Diagnostics, observability, and telemetry integration for FlowLite FSMs.</summary>
+        <tags>fsm, .net8, workflow, state-machine, ddd, transitions, states, flow, .net.core, flowLite, async-flow, diagnostics, telemetry, metrics, logging, open-telemetry, tracing</tags>
+        <repository type="git" url="https://github.com/HawkN113/FlowLite" branch="main" />
+        <projectUrl>https://github.com/HawkN113/FlowLite</projectUrl>
+        <license type="expression">MIT</license>
+        <icon>content\FlowLite.ico.png</icon>
+        <readme>content\README.md</readme>
+        <language>en-GB</language>
+        <releaseNotes>
+            - Added support for .NET 8.0;
+            - Added support for telemetry, logging, and event tracking.
+            - Integrated support for OpenTelemetry via System.Diagnostics.Metrics.
+            - Console, ILogger, and DiagnosticObserver event hooks.
+            - Global FSM diagnostics configuration and listeners.
+        </releaseNotes>
+        <copyright>Copyright © 2025 Nikolay Selyutin (HawkN113)</copyright>
+        <dependencies>
+            <group targetFramework="net8.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\*" target="lib\net8.0" />
+        <file src="Package\Content\FlowLite.ico.png" target="content\FlowLite.ico.png" />
+        <file src="Package\Content\README.md" target="content\README.md" />
+    </files>
+</package>

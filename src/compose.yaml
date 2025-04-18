@@ -1,0 +1,12 @@
+﻿services:
+  flowlite.console:
+    image: flowlite.console
+    build:
+      context: .
+      dockerfile: samples/FlowLite.Console/Dockerfile
+
+  flowlite.webapi:
+    image: flowlite.webapi
+    build:
+      context: .
+      dockerfile: samples/FlowLite.WebApi/Dockerfile

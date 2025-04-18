@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>FlowLite</id>
+        <version>8.0.0</version>
+        <title>FlowLite</title>
+        <authors>Nikolay Selyutin (HawkN113)</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>FlowLite is a high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage.</description>
+        <summary>A high-performance state machine for .NET 8+ with fluent API and export support (Mermaid/DOT).</summary>
+        <tags>fsm, .net8, workflow, state-machine, ddd, export, finite, transitions, states, flow, .net.core, flowLite, dot, mermaid, async-flow, lifecycles</tags>
+        <repository type="git" url="https://github.com/HawkN113/FlowLite" branch="main" />
+        <projectUrl>https://github.com/HawkN113/FlowLite</projectUrl>
+        <license type="expression">MIT</license>
+        <icon>content\FlowLite.ico.png</icon>
+        <readme>content\README.md</readme>
+        <language>en-GB</language>
+        <releaseNotes>
+            - Added support for .NET 8.0;
+            - Fluent transition builder with `.AsFinal()`;
+            - Fluent transition builder with `.MarkForDeletion()` (delete entity);
+            - Create a configuration with FlowTransitionBuilder usage;
+            - Export FSM as Mermaid or DOT diagram;
+            - Pluggable state storage: JSON / InMemory;
+            - Thread-safe design with async-locking;
+        </releaseNotes>
+        <copyright>Copyright © 2025 Nikolay Selyutin (HawkN113)</copyright>
+        <dependencies>
+            <group targetFramework="net8.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\net8.0\*" target="lib\net8.0" />
+        <file src="Package\Content\FlowLite.ico.png" target="content\FlowLite.ico.png" />
+        <file src="Package\Content\README.md" target="content\README.md" />
+    </files>
+</package>
