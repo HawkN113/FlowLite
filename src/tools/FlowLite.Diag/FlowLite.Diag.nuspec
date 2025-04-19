@@ -31,7 +31,7 @@
         </packageTypes>
     </metadata>
     <files>
-        <file src="bin\Release\net8.0\publish\**\*" target="tools\net8.0\any\" />
+        <file src="bin\Release\net8.0\**\*" target="tools\net8.0\any\" />
         <file src="Package\Content\FlowLite.Diag.ico.png" target="content\FlowLite.Diag.ico.png" />
         <file src="Package\Content\README.md" target="content\README.md" />
         <file src="DotnetToolSettings.xml" target="tools\net8.0\any\DotnetToolSettings.xml" />

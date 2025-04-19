@@ -28,12 +28,12 @@
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
     </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
-    </ItemGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="FlowLite.Core.Tests" />
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
     </ItemGroup>
 </Project>

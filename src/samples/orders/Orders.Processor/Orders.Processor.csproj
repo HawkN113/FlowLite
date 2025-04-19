@@ -15,18 +15,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\package\FlowLite.Diagnostics\FlowLite.Diagnostics.csproj" />
-      <ProjectReference Include="..\..\..\package\FlowLite\FlowLite.csproj" />
-      <ProjectReference Include="..\OrderGateway.Api.Abstractions\OrderGateway.Api.Abstractions.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="appsettings.Development.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="appsettings.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\package\FlowLite.Core\FlowLite.Core.csproj" />
+      <ProjectReference Include="..\..\..\package\FlowLite.Diagnostics\FlowLite.Diagnostics.csproj" />
+      <ProjectReference Include="..\OrderGateway.Api.Abstractions\OrderGateway.Api.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

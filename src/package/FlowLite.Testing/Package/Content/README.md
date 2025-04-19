@@ -30,6 +30,7 @@ Install-Package FlowLite.Testing -Version 8.0.0
 ```
 ### .NET CLI
 ```bash
+dotnet add package FlowLite.Abstractions --version 8.0.0
 dotnet add package FlowLite.Testing --version 8.0.0
 ```
 ---

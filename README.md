@@ -1,9 +1,10 @@
 # FlowLite
 
+[![NuGet](https://img.shields.io/nuget/v/FlowLite.Abstractions?label=FlowLite.Abstractions)](https://www.nuget.org/packages/FlowLite.Abstractions/)
 [![NuGet](https://img.shields.io/nuget/v/FlowLite?label=FlowLite)](https://www.nuget.org/packages/FlowLite/)
-[![NuGet](https://img.shields.io/nuget/v/FlowLite?label=FlowLite.Diag)](https://www.nuget.org/packages/FlowLite.Diag/)
-[![NuGet](https://img.shields.io/nuget/v/FlowLite?label=FlowLite.Testing)](https://www.nuget.org/packages/FlowLite.Testing/)
-[![NuGet](https://img.shields.io/nuget/v/FlowLite?label=FlowLite.Diagnostics)](https://www.nuget.org/packages/FlowLite.Diagnostics/)
+[![NuGet](https://img.shields.io/nuget/v/FlowLite.Diag?label=FlowLite.Diag)](https://www.nuget.org/packages/FlowLite.Diag/)
+[![NuGet](https://img.shields.io/nuget/v/FlowLite.Testing?label=FlowLite.Testing)](https://www.nuget.org/packages/FlowLite.Testing/)
+[![NuGet](https://img.shields.io/nuget/v/FlowLite.Diagnostics?label=FlowLite.Diagnostics)](https://www.nuget.org/packages/FlowLite.Diagnostics/)
 [![GitHub license](https://img.shields.io/github/license/HawkN113/FlowLite)](https://github.com/HawkN113/FlowLite/blob/main/LICENSE)
 
 | ![FlowLite](docs/img/FlowLite.png) | **FlowLite** is a high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage. |
@@ -107,6 +108,7 @@ Install-Package FlowLite -Version 8.0.0
 ```
 ### .NET CLI
 ```bash
+dotnet add package FlowLite.Abstractions --version 8.0.0
 dotnet add package FlowLite --version 8.0.0
 ```
 
@@ -124,6 +126,7 @@ Install-Package FlowLite.Testing -Version 8.0.0
 ```
 ### .NET CLI
 ```bash
+dotnet add package FlowLite.Abstractions --version 8.0.0
 dotnet add package FlowLite.Testing --version 8.0.0
 ```
 
@@ -134,6 +137,7 @@ Install-Package FlowLite.Diagnostics -Version 8.0.0
 ```
 ### .NET CLI
 ```bash
+dotnet add package FlowLite.Abstractions --version 8.0.0
 dotnet add package FlowLite.Diagnostics --version 8.0.0
 ```
 ---

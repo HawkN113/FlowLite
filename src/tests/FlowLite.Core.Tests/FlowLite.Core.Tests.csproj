@@ -27,7 +27,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\core\FlowLite.Core\FlowLite.Core.csproj" />
+      <ProjectReference Include="..\..\package\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
+      <ProjectReference Include="..\..\package\FlowLite.Core\FlowLite.Core.csproj" />
     </ItemGroup>
 
 </Project>

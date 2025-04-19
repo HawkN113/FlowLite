@@ -11,10 +11,6 @@
         <GenerateAssemblyFileVersionAttribute>true</GenerateAssemblyFileVersionAttribute>
         <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\core\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
-    </ItemGroup>
     
     <PropertyGroup>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -35,6 +31,10 @@
         <None Update="Package\Content\README.md">
             <CopyToOutputDirectory>Never</CopyToOutputDirectory>
         </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
     </ItemGroup>
 
 </Project>

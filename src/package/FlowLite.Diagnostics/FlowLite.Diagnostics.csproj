@@ -27,9 +27,6 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\..\core\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
-    </ItemGroup>
-    <ItemGroup>
       <Compile Remove="StateFlowDiagnostics.cs" />
       <Compile Remove="DiagnosticsSink.cs" />
     </ItemGroup>
@@ -40,5 +37,8 @@
       <None Update="Package\Content\README.md">
         <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
     </ItemGroup>
 </Project>

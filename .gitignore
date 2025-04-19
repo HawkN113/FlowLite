@@ -1,8 +1,4 @@
 **/.idea/*
-src/core/FlowLite.Core/obj/**
-src/core/FlowLite.Core/bin/**
-src/core/FlowLite.Core.Abstractions/obj/**
-src/core/FlowLite.Core.Abstractions/bin/**
 
 src/FlowLite/obj/**
 src/FlowLite/bin/**
@@ -12,6 +8,10 @@ src/package/FlowLite.Testing/obj/**
 src/package/FlowLite.Testing/bin/**
 src/package/FlowLite.Diagnostics/obj/**
 src/package/FlowLite.Diagnostics/bin/**
+src/package/FlowLite.Core/obj/**
+src/package/FlowLite.Core/bin/**
+src/package/FlowLite.Core.Abstractions/obj/**
+src/package/FlowLite.Core.Abstractions/bin/**
 
 src/samples/FlowLite.Console/bin/**
 src/samples/FlowLite.Console/obj/**

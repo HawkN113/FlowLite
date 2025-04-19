@@ -17,7 +17,8 @@
         </Content>
     </ItemGroup>
     <ItemGroup>
+      <ProjectReference Include="..\..\package\FlowLite.Core.Abstractions\FlowLite.Core.Abstractions.csproj" />
+      <ProjectReference Include="..\..\package\FlowLite.Core\FlowLite.Core.csproj" />
       <ProjectReference Include="..\..\package\FlowLite.Diagnostics\FlowLite.Diagnostics.csproj" />
-      <ProjectReference Include="..\..\package\FlowLite\FlowLite.csproj" />
     </ItemGroup>
 </Project>

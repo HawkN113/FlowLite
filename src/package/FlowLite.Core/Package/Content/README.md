@@ -1,6 +1,6 @@
 # FlowLite
 
-FlowLite is a high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage. 
+FlowLite is a high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage.
 
 ## Features
 - **Lightweight & Fast** – Optimized for high-performance applications.
@@ -10,7 +10,7 @@ FlowLite is a high-performance, thread-safe, and developer-friendly finite state
 - **Event Hooks** – Capture and log every state change for debugging and auditing (check state, check entry, delete entry).
 - **Cycle Prevention** – Detects and prevents cyclic transitions.
 - **Error Handling** – Graceful fallback mechanisms for invalid transitions.
-- **Final States** – Define terminal states where transitions are restricted. 
+- **Final States** – Define terminal states where transitions are restricted.
 - **Flexible Configuration** – Supports **builder pattern** for easy transition setup.
 - **Parallel & Sequential State Execution** – Suitable for multi-threaded workflows.
 - **Custom Transition Conditions** – Add business logic to control transitions.
@@ -43,6 +43,7 @@ Install-Package FlowLite -Version 8.0.0
 ```
 ### .NET CLI
 ```bash
+dotnet add package FlowLite.Abstractions --version 8.0.0
 dotnet add package FlowLite --version 8.0.0
 ```
 ---
