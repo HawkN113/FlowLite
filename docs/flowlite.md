@@ -16,7 +16,6 @@ FlowLite is a high-performance, thread-safe, and developer-friendly finite state
 - **Custom Transition Conditions** – Add business logic to control transitions.
 - **Dependency Injection Support** – Seamless integration into DI containers.
 - **Storage-Agnostic** – Plug in your own storage strategy
-- **Diagram Export** – Export transitions as **Mermaid.js** or **Graphviz DOT**.
 ---
 
 ## Getting Started
@@ -35,17 +34,8 @@ FlowLite is a high-performance, thread-safe, and developer-friendly finite state
 
 ## Installation
 
-To install the latest version of the `FlowLite` [NuGet package](https://www.nuget.org/packages/FlowLite/):
+User the latest version of the `FlowLite` [NuGet package](https://www.nuget.org/packages/FlowLite/):
 
-### NuGet Package Manager
-```bash
-Install-Package FlowLite -Version 8.0.0
-```
-### .NET CLI
-```bash
-dotnet add package FlowLite.Abstractions --version 8.0.0
-dotnet add package FlowLite --version 8.0.0
-```
 ---
 
 ## Prerequisites
@@ -92,7 +82,7 @@ services.AddFlowLiteStorage<OrderState, int, Order>(
     "C:\FlowLite_Storage\"
 );
 ```
-`JSON` storage is used for learning or review
+`JSON` storage is used for learning or review state processing.
 
 #### In-Memory Storage (Volatile)
 ```csharp
@@ -101,7 +91,9 @@ services.AddFlowLiteStorage<OrderState, int, Order>(
     "C:\FlowLite_Storage\"
 );
 ```
-In-Memory storage is used for production environment.
+
+`In-Memory` storage is used for production environment.
+
 ---
 
 ### 4. Initialize State Machine
@@ -277,6 +269,3 @@ var diagramMermaid = stateMachine.Export(ExportType.Mermaid);
 var diagramDot = stateMachine.Export(ExportType.Dot);
 ```
 ---
-
-## License
-This project is licensed under the MIT License.

@@ -11,7 +11,7 @@
 |--------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 ---
 
-## Features
+## Features ([docs](docs/flowlite.md))
 - **Lightweight & Fast** – Optimized for high-performance applications.
 - **Asynchronous & Thread-Safe** – Ensures smooth execution in concurrent environments.
 - **Declarative API** – Define state transitions with a clean and fluent syntax.
@@ -28,14 +28,14 @@
 - **Diagram Export** – Export transitions as **Mermaid.js** or **Graphviz DOT**.
 
 ## Advanced features
-For `FlowLite.Diag`:
+For `FlowLite.Diag` ([docs](docs/flowlite.diag.md)):
 
-- **Scans `.cs` files** and locates all `FlowTransitionBuilder<...>` instances.
-- Generates **Mermaid.js** or **DOT (Graphviz)** diagrams from C# code.
+- Scans `.cs` files and locates all `FlowTransitionBuilder<...>` instances.
+- Generates Mermaid.js or Graphviz DOT diagrams from C# code.
 - Automatically separates transitions by builder instance.
 - Displays file path and per-builder FSM diagrams in the output.
 
-For `FlowLite.Testing`:
+For `FlowLite.Testing` ([docs](docs/flowlite.testing.md)):
 
 - **Fluent Assertions** — expressive `.Should().Allow(...)`, `.BeIn(...)`, `.Logs()`, etc.
 - **Trigger Validation** — `.Assert().Allow(...)` or `.NotAllow(...)`.
@@ -44,14 +44,20 @@ For `FlowLite.Testing`:
 - **History Validation** — verify transition path, length, or contents.
 - **Minimal & Fast** — no dependencies on other testing libraries or frameworks.
 
+For `FlowLite.Diagnostics` ([docs](docs/flowlite.diagnostics.md)):
+- **Console logging** of all FSM events.
+- **Telemetry metrics via System.Diagnostics.Metrics** (OpenTelemetry-compatible).
+- **DiagnosticListener events** (StateChanged, EntityChanged, EntityDeleted).
+- **Integration with ILogger** (Microsoft.Extensions.Logging).
+- **Global diagnostics**: auto-attach listeners to all FSMs via FlowLite global hook.
+- Extensibility via custom **IDiagnosticsFlowLiteListener**.
+
 ---
 ## Additional tools and features
 
 - **[FlowLite.Diag](https://www.nuget.org/packages/FlowLite.Diag/)** is a cross-platform .NET CLI tool for **visualizing finite state machine (FSM)** state transitions based on `FlowTransitionBuilder` code from the `FlowLite` library.
-
-- **[FlowLite.Testing](https://www.nuget.org/packages/FlowLite.Testing/)** is a minimalistic and fluent testing library designed for writing expressive and structured unit tests for your **FlowLite FSM** workflows.
-
-- **[FlowLite.Diagnostics](https://www.nuget.org/packages/FlowLite.Diagnostics/)** is an extension for **FlowLite*** that adds logging, telemetry, observability, and global FSM diagnostics. It allows you to monitor the full lifecycle of your finite state machine, including transitions, errors, entity changes, and deletions.
+- **[FlowLite.Testing](https://www.nuget.org/packages/FlowLite.Testing/)** is a minimalistic and fluent testing library designed for writing expressive and structured unit tests for your `FlowLite` workflows.
+- **[FlowLite.Diagnostics](https://www.nuget.org/packages/FlowLite.Diagnostics/)** is an extension for `FlowLite` that adds logging, telemetry, observability, and global FSM diagnostics. It allows you to monitor the full lifecycle of your finite state machine, including transitions, errors, entity changes, and deletions.
 ---
 
 ## Getting Started
@@ -69,13 +75,13 @@ For `FlowLite.Testing`:
 - Visual debugging of state transitions.
 
 ### When to Use FlowLite.Testing?
-- You want to write unit tests for your FlowLite-based FSMs.
-- You need to verify that a specific trigger is allowed or disallowed.
-- You want to check logs, such as errors, warnings, or final state messages.
-- You want to assert transition history, including order and contents.
-- You need to validate that an entity was updated or deleted during a transition.
-- You're building test-driven FSM logic with clear, maintainable assertions.
-- You want to test FSM behavior independently of storage or infrastructure.
+- To write unit tests for your FlowLite-based FSMs.
+- To verify that a specific trigger is allowed or disallowed.
+- To check logs, such as errors, warnings, or final state messages.
+- To assert transition history, including order and contents.
+- To validate that an entity was updated or deleted during a transition.
+- Building test-driven FSM logic with clear, maintainable assertions.
+- To test FSM behavior independently of storage or infrastructure.
 
 ### When to Use FlowLite.Diagnostics?
 - Track state transitions, entity changes, and lifecycle events using logs, metrics, and diagnostic events.
@@ -92,12 +98,12 @@ For `FlowLite.Testing`:
 
 To add the Nuget package for the project type.
 
-| Package                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                   |
-|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [FlowLite](https://www.nuget.org/packages/FlowLite)                                         | A high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage. |
-| [FlowLite.Diag](https://www.nuget.org/packages/FlowLite.Diag)                                | A cross-platform .NET CLI tool for **visualizing finite state machine (FSM)** state transitions based on `FlowTransitionBuilder` code from the [`FlowLite`](https://github.com/HawkN113/FlowLite) library.|
-| [FlowLite.Testing](https://www.nuget.org/packages/FlowLite.Testing)                                | A minimalistic and fluent testing library designed for writing expressive and structured unit tests for your **FlowLite FSM** workflows.|
-| [FlowLite.Diagnostics](https://www.nuget.org/packages/FlowLite.Diagnostics/)                              | An extension for **FlowLite*** that adds logging, telemetry, observability, and global FSM diagnostics. It allows you to monitor the full lifecycle of your finite state machine, including transitions, errors, entity changes, and deletions.|
+| Package                                                                      | Description                                                                                                                                                                                                                                                                                                                                                                                                   |
+|------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [FlowLite](https://www.nuget.org/packages/FlowLite)                          | A high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way. Features: fluent API for state and trigger configuration, async support for transition logic, export as Mermaid.js or DOT graph, built-in JSON and in-memory storage. |
+| [FlowLite.Diag](https://www.nuget.org/packages/FlowLite.Diag)                | A cross-platform .NET CLI tool for **visualizing finite state machine (FSM)** state transitions based on `FlowTransitionBuilder` code from the [`FlowLite`](https://github.com/HawkN113/FlowLite) library.|
+| [FlowLite.Testing](https://www.nuget.org/packages/FlowLite.Testing)          | A minimalistic and fluent testing library designed for writing expressive and structured unit tests for your **FlowLite FSM** workflows.|
+| [FlowLite.Diagnostics](https://www.nuget.org/packages/FlowLite.Diagnostics/) | An extension for **FlowLite** that adds logging, telemetry, observability, and global FSM diagnostics. It allows you to monitor the full lifecycle of your finite state machine, including transitions, errors, entity changes, and deletions.|
 
 To install the latest version of the [FlowLite](https://www.nuget.org/packages/FlowLite/):
 
@@ -114,7 +120,7 @@ dotnet add package FlowLite --version 8.0.0
 
 ### FlowLite.Diag
 ### NuGet Package Manager
-**Installation**
+**Installation (as tool)**
 ```bash
 dotnet tool install -g flowlite-diag --add-source ./nupkg
 ```
@@ -150,6 +156,7 @@ dotnet add package FlowLite.Diagnostics --version 8.0.0
 
 ### Required Namespaces
 ```csharp
+using FlowLite.Core.Abstractions;
 using FlowLite.Configuration;
 using FlowLite.Core;
 using FlowLite.Extensions;
@@ -176,7 +183,6 @@ public class Order
     public bool PaymentConfirmed { get; set; }
 }
 ```
-
 ---
 
 ### 3. Configure Storage
@@ -188,7 +194,7 @@ services.AddFlowLiteStorage<OrderState, int, Order>(
     "C:\FlowLite_Storage\"
 );
 ```
-`JSON` storage is used for learning or review
+`JSON` storage is used for learning or review state processing
 
 #### In-Memory Storage (Volatile)
 ```csharp
@@ -197,7 +203,7 @@ services.AddFlowLiteStorage<OrderState, int, Order>(
     "C:\FlowLite_Storage\"
 );
 ```
-In-Memory storage is used for production environment.
+`In-Memory` storage is used for production environment.
 
 ---
 
@@ -210,7 +216,6 @@ var stateMachine = new StateFlowMachine<OrderState, OrderTrigger, int, Order>(
     entity: order
 );
 ```
-
 ---
 
 ### 5. Configure Transitions
@@ -311,6 +316,10 @@ await stateMachine.FireAsync(OrderTrigger.Ship);
 await stateMachine.FireAsync(OrderTrigger.Deliver);
 ```
 ---
+Using Result pattern:
+```csharp
+Result<bool> result = await fsm.TryFireAsync(OrderTrigger.Pay);
+```
 
 ### 7. Track State History & Logs
 ```csharp
@@ -559,3 +568,7 @@ services.AddFlowLiteDiagnostics<OrderState, OrderTrigger, int, Order>(opt =>
 });
 ```
 Use **CustomListeners** to add a custom listener (based on **IDiagnosticsFlowLiteListener**)
+
+## License
+
+This project is licensed under the MIT License.

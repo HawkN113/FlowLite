@@ -3,7 +3,6 @@ using FlowLite.Core.Configuration;
 using FlowLite.Core.Extensions;
 using FlowLite.Core.Fsm;
 using FlowLite.Diagnostics.Extensions;
-using FlowLite.Diagnostics.Options;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -97,8 +96,11 @@ try
     foreach (var item in orders)
     {
         // create a disposable instance of state machine flow
-        // using var fsm = GetStateMachineFlow(orderStorage, item)
-        using var fsm = GetStateMachineFlow(orderStorage, item)
+        using var fsm = new StateFlowMachine<OrderState, OrderTrigger, int, Order>(
+                Enum.Parse<OrderState>(item.Status),
+                orderStorage,
+                item.Id,
+                item)
             .ConfigureTransitions(stateFlowConfig);
         
         // Local basic diagnostics
@@ -144,7 +146,11 @@ try
     {
         // create a disposable instance of state machine flow
         //using var fsm = GetStateMachineFlow(orderStorage, item)
-        using var fsm = GetStateMachineFlow(orderStorage, item)
+        using var fsm = new StateFlowMachine<OrderState, OrderTrigger, int, Order>(
+                Enum.Parse<OrderState>(item.Status), 
+                orderStorage, 
+                item.Id, 
+                item)
             .ConfigureTransitions(stateFlowConfig);
         
         // Fire using trigger
@@ -160,7 +166,11 @@ try
     {
         // create a disposable instance of state machine flow
         //using var fsm = GetStateMachineFlow(orderStorage, item)
-        using var fsm = GetStateMachineFlow(orderStorage, item)
+        using var fsm = new StateFlowMachine<OrderState, OrderTrigger, int, Order>(
+                Enum.Parse<OrderState>(item.Status),
+                orderStorage,
+                item.Id,
+                item)
             .ConfigureTransitions(stateFlowConfig);
         
         // Fire using trigger
@@ -175,15 +185,3 @@ catch (Exception ex)
 }
 
 return;
-
-StateFlowMachine<OrderState, OrderTrigger, int, Order> GetStateMachineFlow(
-    IEntityStateStorage<OrderState, int, Order> storage,
-    Order order)
-{
-    var fsm = new StateFlowMachine<OrderState, OrderTrigger, int, Order>(
-        Enum.Parse<OrderState>(order.Status),
-        storage,
-        order.Id,
-        order);
-    return fsm;
-}

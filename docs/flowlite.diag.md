@@ -1,10 +1,10 @@
 # FlowLite.Diag
 
-FlowLite.Diag is a cross-platform .NET CLI tool for **visualizing finite state machine (FSM)** state transitions based on `FlowTransitionBuilder` code from the [`FlowLite`](https://github.com/HawkN113/FlowLite) library.
+FlowLite.Diag is a cross-platform .NET CLI tool for visualizing finite state machine (FSM) state transitions based on `FlowTransitionBuilder` code from the [`FlowLite`](https://github.com/HawkN113/FlowLite) library.
 
 ## Features
 - Scans `.cs` files and locates all `FlowTransitionBuilder<...>` instances.
-- Generates **Mermaid.js** or **DOT (Graphviz)** diagrams from C# code.
+- Generates Mermaid.js or Graphviz DOT diagrams from C# code.
 - Automatically separates transitions by builder instance.
 - Displays file path and per-builder FSM diagrams in the output.
 ---
@@ -19,7 +19,6 @@ FlowLite.Diag is a cross-platform .NET CLI tool for **visualizing finite state m
 ### Prerequisites
 
 - .NET 8 or higher.
-- Install the library [FlowLite](https://www.nuget.org/packages/FlowLite/) package.
 - C# source using `FlowTransitionBuilder` of [FlowLite](https://www.nuget.org/packages/FlowLite/) package.
 ---
 
@@ -59,7 +58,3 @@ stateDiagram-v2
     Shipped --> Canceled : Cancel
     Failed --> Deleted : Delete
 ```
----
-
-## License
-This project is licensed under the MIT License.

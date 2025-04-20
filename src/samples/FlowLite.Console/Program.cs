@@ -48,7 +48,7 @@ try
     };
 
     var storage = host.Services.GetFlowLiteStorage<OrderState, string, Order>();
-    var ustorage = host.Services.GetFlowLiteStorage<UserState, int, User>();
+    var user_storage = host.Services.GetFlowLiteStorage<UserState, int, User>();
 
     using var fsm = new StateFlowMachine<OrderState, OrderTrigger, string, Order>(
         OrderState.Created,
@@ -129,20 +129,19 @@ try
     Console.WriteLine($"Current entity: {JsonSerializer.Serialize(currentEntity)}");
     foreach (var (trigger, state) in history)
         Console.WriteLine(trigger is not null ? $"{trigger} -> {state}" : $"Start: {state}");
-
     var logs = fsm.GetLogs();
     foreach (var log in logs)
         Console.WriteLine(log);
 
     var userList = new List<User>()
     {
-        new User()
+        new()
         {
             UserId = 1,
             modifiedAt = DateTimeOffset.UtcNow,
             CreatedAt = DateTimeOffset.UtcNow
         },
-        new User()
+        new()
         {
             UserId = 2,
             modifiedAt = DateTimeOffset.UtcNow,
@@ -154,7 +153,7 @@ try
     {
         using var userFsm = new StateFlowMachine<UserState, UserTrigger, int, User>(
             UserState.Created,
-            ustorage,
+            user_storage,
             user.UserId,
             user);
 
@@ -170,6 +169,7 @@ try
                     ctx.Entity!.modifiedAt = DateTimeOffset.UtcNow;
                     await Task.CompletedTask;
                 });
+        
         await userFsm.FireAsync(UserTrigger.Create);
         await userFsm.FireAsync(UserTrigger.Activate);
     }

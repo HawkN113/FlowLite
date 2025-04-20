@@ -15,17 +15,8 @@
 
 ## Installation
 
-To install the latest version of the `FlowLite.Diagnostics` [NuGet package](https://www.nuget.org/packages/FlowLite.Diagnostics/):
+Use the latest version of the `FlowLite.Diagnostics` [NuGet package](https://www.nuget.org/packages/FlowLite.Diagnostics/)
 
-### NuGet Package Manager
-```bash
-Install-Package FlowLite.Diagnostics -Version 8.0.0
-```
-### .NET CLI
-```bash
-dotnet add package FlowLite.Abstractions --version 8.0.0
-dotnet add package FlowLite.Diagnostics --version 8.0.0
-```
 ---
 
 ## Usage Guide
@@ -73,7 +64,7 @@ fsm.UseTelemetry(new TelemetryOptions()
     Source = "FlowLite.FSM"
 });
 ```
-or 
+or
 ```csharp
 fsm.UseTelemetry();
 ```
@@ -87,7 +78,7 @@ fsm.UseLogging(new LoggingOptions()
     UseLogger = false
 });
 ```
-or 
+or
 ```csharp
 fsm.UseConsoleLogging();
 ```
@@ -111,7 +102,7 @@ fsm.UseDiagnosticObserver(new DiagnosticObserverOptions()
     Source = "FlowLite.Diagnostics"
 });
 ```
-or 
+or
 ```csharp
 fsm.UseDiagnosticObserver();
 ```
@@ -131,8 +122,3 @@ services.AddFlowLiteDiagnostics<OrderState, OrderTrigger, int, Order>(opt =>
 });
 ```
 Use **CustomListeners** to add a custom listener (based on **IDiagnosticsFlowLiteListener**)
-
----
-
-## License
-This project is licensed under the MIT License.

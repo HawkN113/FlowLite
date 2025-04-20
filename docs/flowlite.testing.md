@@ -22,17 +22,8 @@ It builds on top of [FlowLite](https://www.nuget.org/packages/FlowLite), enablin
 
 ## Installation
 
-To install the latest version of the `FlowLite.Testing` [NuGet package](https://www.nuget.org/packages/FlowLite.Testing/):
+Use the latest version of the `FlowLite.Testing` [NuGet package](https://www.nuget.org/packages/FlowLite.Testing/)
 
-### NuGet Package Manager
-```bash
-Install-Package FlowLite.Testing -Version 8.0.0
-```
-### .NET CLI
-```bash
-dotnet add package FlowLite.Abstractions --version 8.0.0
-dotnet add package FlowLite.Testing --version 8.0.0
-```
 ---
 
 ## Usage Guide
@@ -110,6 +101,3 @@ fsm.Should()
     .Logs().Log(LogLevel.Info, "Paid");
 ```
 ---
-
-## License
-This project is licensed under the MIT License.
