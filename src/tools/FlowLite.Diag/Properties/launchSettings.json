@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "FlowLite.Diag": {
+      "commandName": "Project",
+      "commandLineArgs": "--source \"C:\\Experiments\\FlowLite\\src\\samples\\orders\\Orders.Processor\" --format \"dot\"",
+      "__commandLineArgs": "-s \"C:\\Experiments\\FlowLite\\src\\samples\\orders\\Orders.Processor\" -f \"dot\"",
+      "environmentVariables": {
+      }
+    }
+  }
+}
