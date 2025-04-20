@@ -54,7 +54,7 @@ For `FlowLite.Diagnostics` ([docs](docs/flowlite.diagnostics.md)):
 
 ---
 ## Additional tools and features
-
+- **[FlowLite](https://www.nuget.org/packages/FlowLite)** is a high-performance, thread-safe, and developer-friendly finite state machine (FSM) library for .NET. It helps you manage entity state transitions, workflow automation, and domain-driven state logic in a structured and testable way.
 - **[FlowLite.Diag](https://www.nuget.org/packages/FlowLite.Diag/)** is a cross-platform .NET CLI tool for **visualizing finite state machine (FSM)** state transitions based on `FlowTransitionBuilder` code from the `FlowLite` library.
 - **[FlowLite.Testing](https://www.nuget.org/packages/FlowLite.Testing/)** is a minimalistic and fluent testing library designed for writing expressive and structured unit tests for your `FlowLite` workflows.
 - **[FlowLite.Diagnostics](https://www.nuget.org/packages/FlowLite.Diagnostics/)** is an extension for `FlowLite` that adds logging, telemetry, observability, and global FSM diagnostics. It allows you to monitor the full lifecycle of your finite state machine, including transitions, errors, entity changes, and deletions.
