@@ -572,3 +572,7 @@ Use **CustomListeners** to add a custom listener (based on **IDiagnosticsFlowLit
 ## License
 
 This project is licensed under the MIT License.
+
+## References
+
+[FlowLite — a lightweight way to manage state in .NET without the pain](https://medium.com/@nselyutin/flowlite-a-lightweight-way-to-manage-state-in-net-without-the-pain-87ff6aa3fcd1)
